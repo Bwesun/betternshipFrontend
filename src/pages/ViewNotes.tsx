@@ -42,7 +42,7 @@ const ViewNotes = () => {
 
     const handleSave = async (id: number) => {
         try {
-            const response = await axios.put(`http://localhost:4000/api/notes/${id}`, {
+            const response = await axios.patch(`http://localhost:4000/api/notes/${id}`, {
                 title: editTitle,
                 content: editContent,
             });
